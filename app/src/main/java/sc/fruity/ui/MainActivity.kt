@@ -57,28 +57,30 @@ fun FruitList(modifier: Modifier = Modifier, viewModel: MainViewModel = viewMode
         viewModel.getAllFruits()
     })
 
-    Box(
-        Modifier
-            .fillMaxSize()
-            .pullRefresh(pullRefreshState)
-    ) {
-        Column {
+        Box(
+            Modifier
+                .fillMaxSize()
+                .pullRefresh(pullRefreshState)
+        ) {
+            Column {
 
-            if (!refreshing && viewModel.fruits != null) {
-                LazyColumn(
-                    modifier = Modifier.fillMaxSize(),
-                ) {
-                    items(items = viewModel.fruits!!) { fruit ->
-                        FruitItem(fruit = fruit)
+                if (!refreshing && viewModel.fruits != null) {
+                    LazyColumn(
+                        modifier = Modifier.fillMaxSize(),
+                    ) {
+                        items(items = viewModel.fruits!!) { fruit ->
+                            FruitItem(fruit = fruit)
+                        }
                     }
-                }
 
-            } else Box(
-                modifier = Modifier.fillMaxSize(),
-                contentAlignment = Alignment.BottomCenter
-            ) { LinearProgressIndicator() }
+                } else Box(
+                    modifier = Modifier.fillMaxSize(),
+                    contentAlignment = Alignment.BottomCenter
+                ) { LinearProgressIndicator() }
+            }
+            PullRefreshIndicator(refreshing, pullRefreshState, Modifier.align(Alignment.TopCenter))
         }
-        PullRefreshIndicator(refreshing, pullRefreshState, Modifier.align(Alignment.TopCenter))
+
     }
-}
+
 
