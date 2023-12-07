@@ -52,7 +52,5 @@ Rapp/src/main/java/sc/fruity/ui/widgets/swipetorefresh/PullRefreshIndicatorPatch
 Vapp/src/main/java/sc/fruity/ui/widgets/swipetorefresh/PullRefreshIndicatorTransform.kt,d\7\d73c029ab497ce50904f8af2230c4ff2648e9b77
 y
 Iapp/src/main/java/sc/fruity/ui/widgets/swipetorefresh/PullRefreshState.kt,4\b\4ba9a476db2b9ed2d4115524425e20a28f2ef595
-p
-@app/src/main/java/sc/fruity/ui/widgets/swipetorefresh/RowItem.kt,c\8\c823a89fbb3cda26a9949d72f4c3201e80b1943c
 Y
 )app/src/main/java/sc/fruity/ui/RowItem.kt,a\0\a021fa2b889c51ea7dabcee6662791b91b355062
